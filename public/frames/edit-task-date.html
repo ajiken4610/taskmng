@@ -1,0 +1,61 @@
+<div class="login-warn mt-4">
+    <div class="container if-signined">
+
+        <div class="if-signined">
+            <h1 class="text-muted" id="title">タスクの終了を設定</h1>
+            <div class="">
+                <h2><label for="textbox" class="form-label fw-light my-4" id="description">終了</label></h2>
+                <div class="input-group">
+                    <input type="number" class="form-control text-end scale-6" id="year">
+                    <span class="input-group-text scale-6">年</span>
+                </div>
+                <div class="input-group">
+                    <select class="form-select scale-5 text-end" id="month">
+                        <option value="0">1</option>
+                        <option value="1">2</option>
+                        <option value="2">3</option>
+                        <option value="3">4</option>
+                        <option value="4">5</option>
+                        <option value="5">6</option>
+                        <option value="6">7</option>
+                        <option value="7">8</option>
+                        <option value="8">9</option>
+                        <option value="9">10</option>
+                        <option value="10">11</option>
+                        <option value="11">12</option>
+                    </select>
+                    <span class="input-group-text scale-5">月</span>
+                </div>
+                <div class="input-group">
+                    <input type="number" class="form-control text-end scale-4" id="day" max="1" min="31">
+                    <span class="input-group-text scale-4">日</span>
+                </div>
+                <div class="input-group">
+                    <input type="number" class="form-control text-end scale-3" id="hour" max="0" min="23" value="0">
+                    <span class="input-group-text scale-3">時</span>
+                </div>
+                <div class="input-group">
+                    <input type="number" class="form-control text-end scale-2" id="min" max="0" min="59" value="0">
+                    <span class="input-group-text scale-2">分</span>
+                </div>
+                <div class="input-group">
+                    <input type="number" class="form-control text-end scale-1" id="sec" max="0" min="59" value="0">
+                    <span class="input-group-text scale-1">秒</span>
+                </div>
+                <div class="input-group">
+                    <input type="number" class="form-control text-end scale-0" id="ms" max="0" min="999" value="0">
+                    <span class="input-group-text scale-0">ミリ秒</span>
+                </div>
+                <div class="btn-group d-flex">
+                    <button class="btn btn-outline-secondary" id="dwscale">＜</button>
+                    <button class="btn btn-outline-secondary" id="upscale">＞</button>
+                </div>
+                <div class="form-text">終了日時のスケールを変更するには、「＜」または「＞」を押してください</div>
+            </div>
+        </div>
+        <div class="text-end mb-4">
+            <button class="btn btn-secondary back" id="back">戻る</button>
+            <button class="btn btn-primary" id="next">完了</button>
+        </div>
+    </div>
+</div>

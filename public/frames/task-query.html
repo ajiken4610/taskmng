@@ -1,0 +1,75 @@
+<div class="login-warn mt-4">
+    <div class="container if-signined">
+
+        <h1 class="text-muted">検索</h1>
+        <div class="text-end">
+            <button class="btn btm-sm btn-outline-primary" push="tc">新しいタスクを作成</button>
+        </div>
+        <div class="my-4">
+            <ul class="nav nav-tabs mb-1" id="sort-search-select">
+                <li class="nav-item">
+                    <a class="nav-link active sort" data-bs-toggle="tab" href="#sort" aria-selected="true">並び替え</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link search" data-bs-toggle="tab" href="#search" aria-selected="false">検索</a>
+                </li>
+            </ul>
+            <div class="tab-content mb-1" id="sort-search">
+                <div class="tab-pane fade show active" id="sort">
+                    <select class="form-control sort-search" id="task-sort">
+                        <option value="dd">日付/降順</option>
+                        <option value="da">日付/昇順</option>
+                        <option value="nd">名前/降順</option>
+                        <option value="na">名前/昇順</option>
+                    </select>
+                </div>
+                <div class="tab-pane fade" id="search">
+                    <h2 class="fw-light fs-4 text-muted">名前・説明文</h2>
+                    <input type="search" id="task-search" class="form-control sort-search mb-2" maxlength="20" placeholder="検索..." value="">
+                    <h2 class="fw-light fs-4 text-muted">メタ</h2>
+                    <table class="table mb-1">
+                        <tbody id="search-meta-list">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="text-end form-text">
+                並び替えと文字検索は同時に使用できません
+            </div>
+            <h2 class="fw-light fs-4 text-muted">進捗</h2>
+            <div class="btn-group d-flex flex-column flex-md-row mb-2" id="status-search">
+                <input class="btn-check" type="checkbox" name="task-status" id="search-status-canceled" value="canceled" autocomplete="off" checked>
+                <label class="btn btn-outline-dark" for="search-status-canceled">
+                    廃止
+                </label>
+                <input class="btn-check" type="checkbox" name="task-status" id="search-status-on-hold" value="on-hold" autocomplete="off" checked>
+                <label class="btn btn-outline-secondary" for="search-status-on-hold">
+                    休止
+                </label>
+                <input class="btn-check" type="checkbox" name="task-status" id="search-status-new" value="new" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="search-status-new">
+                    新規
+                </label>
+                <input class="btn-check" type="checkbox" name="task-status" id="search-status-in-progress" value="in-progress" autocomplete="off" checked>
+                <label class="btn btn-outline-warning" for="search-status-in-progress">
+                    進行
+                </label>
+                <input class="btn-check" type="checkbox" name="task-status" id="search-status-completed" value="completed" autocomplete="off" checked>
+                <label class="btn btn-outline-success" for="search-status-completed">
+                    完了
+                </label>
+            </div>
+            <h2 class="fw-light fs-4 text-muted">タイプ</h2>
+            <select class="form-select mb-2" id="search-type">
+                <option value="all">全て</option>
+                <option value="task">タスク</option>
+                <option value="schedule">スケジュール</option>
+            </select>
+            <div id="task-list">
+            </div>
+            <div class="form-text">
+                ここには最大10件表示されます。11件目以降は表示されませんので、検索を利用してください。
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,101 @@
+.full-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(100, 100, 100, .8);
+    z-index: 2147483647;
+}
+
+.full-overlay::after {
+    z-index: 9;
+    position: relative;
+    animation: scaleout 1.0s infinite ease-in-out;
+    content: "";
+    background-image: url("icons/loading.png");
+    width: 256px;
+    height: 256px;
+}
+
+.full-page {
+    min-height: 90vh;
+}
+
+.vertical-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.loading-icon {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.loading-icon::before {
+    position: absolute;
+    content: "";
+    background-image: url("icons/loading.png");
+    transform: scale(.2);
+    width: 256px;
+    height: 256px;
+    z-index: 11;
+}
+
+.navbar-toggler-icon {
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.toast-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.toast {
+    margin: 32px auto;
+}
+
+.noto {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.login-warn::before {
+    content: "このページを利用するためには、ログインしてください。";
+    color: orange;
+}
+
+input::placeholder {
+    font-style: italic;
+}
+
+.full-iframex {
+    position: relative;
+    overflow: hidden;
+}
+
+.full-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
