@@ -1,0 +1,40 @@
+<div class="login-warn mt-4">
+    <div class="container if-signined">
+
+        <div class="">
+            <h1 class="text-muted">メタの種類</h1>
+            <div class="my-4">
+                <fieldset class="form-group">
+                    <legend>
+                        <h2 class="fw-light">種類</h2>
+                    </legend>
+                    <div id="custom-meta-name-input-hint" class="form-text">
+                        カスタムメタの種類を選択します
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="custom-meta-type-radio" id="custom-meta-type-radio-exist" value="exist" checked>
+                        <label class="form-check-label" for="custom-meta-type-radio-exist">
+                            EXIST
+                            <div class="form-text">
+                                存在するかしないかの2通りの状態をとります
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="custom-meta-type-radio" id="custom-meta-type-radio-value" value="enum">
+                        <label class="form-check-label" for="custom-meta-type-radio-value">
+                            ENUM
+                            <div class="form-text">
+                                事前に定義された複数の値から1つの状態をとります。
+                            </div>
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="my-4 text-end">
+            <button class="btn btn-secondary pop" id="back">戻る</button>
+            <button class="btn btn-primary" id="next">完了</button>
+        </div>
+    </div>
+</div>

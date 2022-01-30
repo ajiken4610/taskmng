@@ -1,0 +1,31 @@
+<div class="login-warn mt-4">
+    <div class="container if-signined">
+
+        <div class="if-signined">
+            <h1 class="text-muted">タスクに紐づけるメタを選択してください</h1>
+
+            <div class="">
+                <input type="search" id="custom-meta-search" class="form-control" maxlength="20" placeholder="検索..." value="">
+            </div>
+            <div id="custom-meta-list">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">NAME</th>
+                            <th scope="col">TYPE</th>
+                            <th scope=""></th>
+                        </tr>
+                    </thead>
+                    <tbody id="custom-meta-list-tbody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-text">
+                ここには最大10件表示されます。11件目以降は表示されませんので、検索を利用してください。
+            </div>
+            <div class="text-end mb-4">
+                <button class="btn btn-secondary back" id="back">戻る</button>
+            </div>
+        </div>
+    </div>
+</div>

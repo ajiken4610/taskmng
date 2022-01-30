@@ -1,0 +1,85 @@
+<div class="login-warn mt-4">
+    <div class="container if-signined">
+
+        <div class="if-signined">
+            <h1 class="text-muted">詳細：<span id="title">TASK=TITLE</span></h1>
+            <div class="text-end"><button class="btn btn-sm btn-outline-primary" id="name-edit">名前を編集</button></div>
+            <div class="form-text pre-wrap" id="description"><span class="text-muted">説明文はありません</span></div>
+            <div class="text-end"><button class="btn btn-sm btn-outline-primary" id="description-edit">説明文を編集</button></div>
+            <hr>
+            <h2 class="fw-light text-muted">状態</h2>
+            <div class="btn-group d-flex flex-column flex-md-row mb-2" id="status">
+                <input class="btn-check" type="radio" name="task-status" id="status-canceled" value="canceled" autocomplete="off" checked>
+                <label class="btn btn-outline-dark" for="status-canceled" _for="status-canceled">
+                    廃止
+                </label><input class="btn-check" type="radio" name="task-status" id="status-on-hold" value="on-hold" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="status-on-hold" _for="status-on-hold">
+                    休止
+                </label><input class="btn-check" type="radio" name="task-status" id="status-new" value="new" autocomplete="off">
+                <label class="btn btn-outline-primary" for="status-new" _for="status-new">
+                    新規
+                </label>
+                <input class="btn-check" type="radio" name="task-status" id="status-in-progress" value="in-progress" autocomplete="off">
+                <label class="btn btn-outline-warning" for="status-in-progress" _for="status-in-progress">
+                    進行
+                </label>
+                <input class="btn-check" type="radio" name="task-status" id="status-completed" value="completed" autocomplete="off">
+                <label class="btn btn-outline-success" for="status-completed" _for="status-completed">
+                    完了
+                </label>
+            </div>
+            <h2 class="fw-light text-muted">サブタスク</h2>
+            <div id="task-list">
+                <table class="table">
+                    <tbody id="subtask-list">
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td class="text-end"><button class="btn btm-sm btn-outline-primary" id="add-subtask">＋</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 class="fw-light text-muted">終了</h2>
+            <div id="date" class="fw-light fs-5 font-monospace"></div>
+            <button class="btn btn-sm btn-outline-primary mb-3" id="date-edit">編集</button>
+
+            <h2 class="fw-light text-muted">メタ</h2>
+            <table class="table table-striped">
+                <tbody id="task-meta">
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="text-end"><button class="btn btm-sm btn-outline-primary" id="add-meta">＋</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <h2 class="fw-light text-muted">タイプ</h2>
+            <select class="form-select mb-2" id="type">
+                <option value="task">タスク</option>
+                <option value="schedule">スケジュール</option>
+            </select>
+
+            <!--<div class="btn-group d-flex mb-2" id="type">
+                <input class="btn-check" type="radio" name="task-type" id="type-task" value="task" autocomplete="off" checked>
+                <label class="btn btn-outline-secondary" for="type-task">
+                    タスク
+                </label>
+                <input class="btn-check" type="radio" name="task-type" id="type-schedule" value="schedule" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="type-schedule">
+                    スケジュール
+                </label>
+            </div>-->
+
+            <div class="text-end mb-3">
+                <button class="btn btn-danger" id="delete">タスクを削除</button>
+                <button class="btn btn-primary" id="next">完了</button>
+            </div>
+        </div>
+    </div>
+</div>
